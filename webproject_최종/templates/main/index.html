@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% load static %}
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <title>Li-ion</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/electric-car.css' %}">
+    </head>
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="{% url 'index' %}" class="logo">Elec<em> lium</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#home" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="nav-item dropdown, scroll-to-section">
+                            <a  href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-file-alt"></i>
+                                <span>
+                                    INFORMATION
+                                </span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#FEE">FEE</a>
+                                <a class="dropdown-item" href="#TYPE">TYPE</a>
+                            </div>
+                        </li>
+                            <!-- <li class="scroll-to-section"><a href="#map-API">Map</a></li> -->
+                            <li class="main-button"><a href="{% url 'map' %}">Map</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="home">
+        <video autoplay muted loop id="bg-video">
+            <source src="{% static 'images/car-video.mp4' %}" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>get charged, get stronger</h6>
+                <h2>easy with our <em>Eleclium</em></h2>
+                <div class="main-button scroll-to-section">
+                    <a href="#about">About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Start ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2>How to<em> charge</em>, Where to<em> go</em>?</h2>
+                        <p>이 사이트는 전기차의 충전법을 제대로 알고, 전기차 충전소 위치를 정확하고 신속히 찾기 위해 제작되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <section class="section" id="Team">
+        <div class="container">
+            <!-- ***** How Many Starts ***** -->
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>How <em>many</em> do we <em>Know</em>?</h2>
+                        <img src="{% static 'images/line-dec.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class="col-lg-6 col-md-8 col-sm-8 col-xs-1">
+                    <video src="{% static 'images/The Electric Vehicle Charging Problem.mp4' %}" controls width="500" height="300" style="align-items: center;"></video>
+                </div>
+                <div class="col-lg-6 col-md-8 col-sm-8 col-xs-1">
+                    <p align="left" style="font-size:1em" >
+                        <b><br><br>&nbsp;&nbsp;&nbsp;환경부의 '저공해차 통합정보 누리집'에 따르면<br> 2020년 4월 말 기준, 전국 전기차 충전소 대수는 <br>1만 8080개입니다. 전기차 5대당 충전소 1개가 <br>있는 셈입니다. 절대적인 숫자라면 전국 주유소<br>(동월 기준 1만 1449개)보다 더 많은데 도로에 <br>잘 보이지가 않는다고 합니다.
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <!-- ***** How Many END ***** -->
+            <!-- ***** Name Info Start ***** -->
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>ELEC<em>LIUM</em></h2>
+                        <img src="{% static 'images/line-dec.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 offset-lg-1" align = "center">
+                <div class="cta-content2">
+                    <p>Electric&nbsp;Car <em>+</em> Lithium</p>
+                </div>
+            </div>
+            <div class="col-lg-10 offset-lg-1" align = "center">
+                <div class="cta-content2">
+                    <b><br>&nbsp;&nbsp;&nbsp;전기차 <em>Electric&nbsp;Car</em> 와 전기차의 핵심 원료인 리튬 <em>Lithium</em> 합쳐서 만든 브랜드입니다.
+                </div>
+            </div>
+            <div class="col-lg-10 offset-lg-1" align = "center">
+                <div class="cta-content2">
+                    <img src="{% static 'images/전기차 아이콘.jpg' %} " style="width: 500px; height: 400px;">
+                </div>
+            </div>
+            <!-- ***** Name Info End ***** -->
+            <!-- ***** Team Member Start ***** -->
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Team Project <em>Member</em></h2>
+                        <img src="{% static 'images/line-dec.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{% static 'images/강보민쌤2.jpg' %}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Front-End</span>
+                            <h4>강보민</h4>
+                            <p>고신대학교 광고홍보학과</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{% static 'images/김수빈쌤2.png' %}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Back-End</span>
+                            <h4>김수빈</h4>
+                            <p>경성대학교 응용통계학과</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{% static 'images/유지현쌤3.jpg' %}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Back-End</span>
+                            <h4>유지현</h4>
+                            <p>동양대학교 전자유도기술학과</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{% static 'images/정지훈2.jpg' %}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Front-End</span>
+                            <h4>정지훈</h4>
+                            <p>경북대학교 자동차공학과</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{% static 'images/최어진쌤2.jpg' %}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Back-End</span>
+                            <h4>최어진</h4>
+                            <p>부경대학교 일어일문학과</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** TeamProject Ends ***** -->
+        </div>
+    </section>
+    <!-- ***** About Ends ***** -->
+    <br>
+
+    <!-- ***** Fee Start ***** -->
+    <section class="section" id="FEE">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading dark-bg">
+                        <h2>Charging <em>Rate Fee</em></h2>
+                        <img src="{% static 'images/line-dec.png' %}" alt="">
+                        <p align="left">
+                            - 가격표는 각 충전 사업자가 직접 운영하는 충전소 이용 요금을 기준으로 제공합니다.<br>
+                            - 급속 : 충전속도 50kwh급<br>
+                            - 초급속 : 충전속도 100kwh급<br>
+                            - 기본단위 : 원/kwh, 2021년 11월 기준
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="filters">
+                        <ul class="fee-filter">
+                            <li id="환경부"> 환경부</li>
+                            <li id="에버온"> 에버온</li>
+                            <li id="차지비">차지비</li>
+                            <li id="에스트래픽">에스트래픽</li>
+                            <li id="채비인프라">채비인프라</li>
+                            <li id="해피차저">해피차저</li>
+                            <li id="evline">ev-line</li>
+                            <li id="이비랑">이비랑</li>
+                            <li id="G차저">G차저</li>
+                            <li id="Epit">E-pit</li>
+                            <li id="스타코프">스타코프</li>
+                            <li id="KEVIT">KEVIT</li>
+                            <li id="GS칼텍스">GS칼텍스</li>
+                            <li id="SK에너지">SK에너지</li>
+                            <li id="보타리에너지">보타리에너지</li>
+                            <li id="테슬라">테슬라</li>
+                            <li id="조이이브이">조이이브이</li>
+                            <li id="한국전력">한국전력</li>
+                            <li id="evPlug">evPlug</li>
+                            <li id="현대오일뱅크">현대오일뱅크</li>
+                            <li id="K차저">K-차저</li>
+                            <li id="LG헬로비전">LG헬로비전</li>
+                            <li id="휴맥스EV">휴맥스EV</li>
+                            <li id="삼성EVC">삼성EVC</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="fee-table filtering">
+                        <div id="panel">
+                        <table border="1" id="tab1">
+                                <tr >
+                                    <td>완속</td>
+                                    <td >292.2원</td>
+                                </tr>
+                                <tr>
+                                    <td>급속</td>
+                                    <td>292.2원</td>
+                                </tr>
+                                <tr>
+                                    <td>초급속</td>
+                                    <td>309.1원</td>
+                                </tr>
+                                <tr>
+                                    <td>기타사항</td>
+                                    <td>ㆍ전체 충전사업자에 대해 동일 요금 적용</td>
+                                </tr>
+                        </table>
+                        <table border="1" id="tab2" >
+                            <tr>
+                                <td>완속</td>
+                                <td >
+                                    <br>
+                                    23시~09시 : 189.9원<br>
+                                    09시~10시 : 227.9원<br>
+                                    10시~12시 : 252.9원<br>
+                                    12시~17시 : 227.9원<br>
+                                    17시~20시 : 252.9원<br>
+                                    20시~22시 : 227.9원<br>
+                                    22시~23시 : 252.9원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>급속</td>
+                                <td colspan="2">292.9원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td colspan="2">309.1원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원/로밍</td>
+                                <td colspan="2">360원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab3">
+                            <tr>
+                                <td rowspan="2">완속</td>
+                                <td>주거지</td>
+                                <td >
+                                    23시~09시:199원<br>
+                                    09시~23시:259원
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>상업지</td>
+                                <td >
+                                    23시~09시:249원<br>
+                                    09시~23시:259원
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">급속/초급속</td>
+                                <td>330원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab4">
+                            <tr>
+                                <td rowspan="2">완속</td>
+                                <td>주거지</td>
+                                <td >200원</td>
+                            </tr>
+                            <tr>
+                                <td>상업지</td>
+                                <td >260원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">급속</td>
+                                <td>292.9원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">초급속</td>
+                                <td>309.1원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">비회원</td>
+                                <td>430원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab5">
+                            <tr>
+                                <td>완속</td>
+                                <td >200원</td>
+                            </tr>
+                            <tr>
+                                <td>급속</td>
+                                <td >250원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td >265원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab6">
+                            <tr>
+                                <td rowspan="2">내륙</td>
+                                <td >완속</td>
+                                <td >255.7원</td>
+                            </tr>
+                            <tr>
+                                <td >급속/초급속</td>
+                                <td >290원</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">제주</td>
+                                <td >완속</td>
+                                <td >240원</td>
+                            </tr>
+                            <tr>
+                                <td >급속/초급속</td>
+                                <td >275원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">로밍</td>
+                                <td >350원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">비회원</td>
+                                <td >400원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab7">
+                            <tr>
+                                <td rowspan="2">완속</td>
+                                <td >고정형</td>
+                                <td>
+                                    <br>
+                                    23시~09시 : 175.6원<br>
+                                    09시~10시 : 180.1원<br>
+                                    10시~12시 : 199.1원<br>
+                                    12시~17시 : 180.1원<br>
+                                    17시~20시 : 199.1원<br>
+                                    20시~22시 : 180.1원<br>
+                                    22시~23시 : 199.1원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이동형</td>
+                                <td >
+                                    <br>
+                                    23시~09시 : 62.91원<br>
+                                    09시~10시 : 90.9원<br>
+                                    10시~12시 : 124.92원<br>
+                                    12시~17시 : 90.9원<br>
+                                    17시~20시 : 124.92원<br>
+                                    20시~22시 : 90.9원<br>
+                                    22시~23시 : 124.92원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">기타사항</td>
+                                <td>ㆍ일부 저압 지역은 약 40원 높게 책정</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab8">
+                            <tr>
+                                <td rowspan="2">완속</td>
+                                <td >주거지</td>
+                                <td>
+                                    <br>
+                                    23시~09시 : 174원<br>
+                                    09시~10시 : 221원<br>
+                                    10시~12시 : 267원<br>
+                                    12시~17시 : 221원<br>
+                                    17시~20시 : 267원<br>
+                                    20시~22시 : 221원<br>
+                                    22시~23시 : 267원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>상업지</td>
+                                <td >
+                                    <br>
+                                    23시~09시 : 184원<br>
+                                    09시~10시 : 234원<br>
+                                    10시~12시 : 277원<br>
+                                    12시~17시 : 234원<br>
+                                    17시~20시 : 277원<br>
+                                    20시~22시 : 234원<br>
+                                    22시~23시 : 277원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">급속/초급속</td>
+                                <td>420원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">비회원</td>
+                                <td>420</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab9">
+                            <tr>
+                                <td>완속</td>
+                                <td>178.9원</td>
+                            </tr>
+                            <tr>
+                                <td>급속</td>
+                                <td >292.9원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td >309.1원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원/로밍</td>
+                                <td >375원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab10">
+                            <tr>
+                                <td rowspan="2">일반회원</td>
+                                <td>급속</td>
+                                <td>370원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td >460원</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">비회원</td>
+                                <td>급속</td>
+                                <td>450원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td>500원</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">프라임회원</td>
+                                <td>급속</td>
+                                <td>265원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td >299원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab11">
+                            <tr>
+                                <td>완속</td>
+                                <td >173.8원</td>
+                            </tr>
+                            <tr>
+                                <td>급속/초급속</td>
+                                <td >255.7원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원</td>
+                                <td >400원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab12">
+                            <tr>
+                                <td rowspan="2">완속</td>
+                                <td >주거지</td>
+                                <td>
+                                    <br>
+                                    23시~09시 : 140원<br>
+                                    09시~10시 : 130원<br>
+                                    10시~12시 : 195원<br>
+                                    12시~17시 : 130원<br>
+                                    17시~20시 : 195원<br>
+                                    20시~22시 : 130원<br>
+                                    22시~23시 : 195원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>상업지</td>
+                                <td >255.7원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">비회원</td>
+                                <td>380원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab13">
+                            <tr>
+                                <td>회원</td>
+                                <td >259원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원</td>
+                                <td>279원</td>
+                        </table>
+                        <table border="1" id="tab14">
+                                <tr>
+                                    <td>균일가</td>
+                                    <td >309.1원</td>
+                                </tr>
+                        </table>
+                        <table border="1" id="tab15">
+                            <tr>
+                                <td>기본</td>
+                                <td >255.7원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원</td>
+                                <td>300원</td>
+                            </tr>
+                            <tr>
+                                <td>기타사항</td>
+                                <td>ㆍ조이이브이 맴버십 결제시 240원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab16">
+                            <tr>
+                                <td colspan="2">데스티네이션 완속</td>
+                                <td >무료</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">수퍼차저</td>
+                                <td>V2(120kwh)</td>
+                                <td>275원/kwh</td>
+                            </tr>
+                            <tr>
+                                <td>V3(250kwh)</td>
+                                <td>327원/분</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">기타사항</td>
+                                <td>ㆍ테슬라 차량만 이용 가능</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab17">
+                            <tr>
+                                <td>주거지</td>
+                                <td >178원</td>
+                            </tr>
+                            <tr>
+                                <td>급속/초급속</td>
+                                <td>255.7원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원</td>
+                                <td>400원</td>
+                            </tr>
+                            <tr>
+                                <td>기타사항</td>
+                                <td>
+                                    ㆍ한국전력 이용시 280<br>
+                                    ㆍ보타리에너지 이용시 240원
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab18">
+                            <tr>
+                                <td>급속</td>
+                                <td >292.9원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td>309.1원</td>
+                            </tr>
+                            <tr>
+                                <td>기타사항</td>
+                                <td>ㆍ모든 사업자에 대해 동일하게 적용</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab19">
+                            <tr>
+                                <td>완속</td>
+                                <td >
+                                    <br>
+                                    23시~09시 : 214.9원<br>
+                                    09시~10시 : 253.9원<br>
+                                    10시~12시 : 289.9원<br>
+                                    12시~17시 : 253.9원<br>
+                                    17시~20시 : 289.9원<br>
+                                    20시~22시 : 253.9원<br>
+                                    22시~23시 : 289.9원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>급속</td>
+                                <td>290원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td>305원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원</td>
+                                <td>420원</td>
+                            </tr>
+                            <tr>
+                                <td>기타사항</td>
+                                <td>ㆍ설치 연식에 따라 일부 가격 상이</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab20">
+                            <tr>
+                                <td>급속</td>
+                                <td >292.9원</td>
+                            </tr>
+                            <tr>
+                                <td>초급속</td>
+                                <td>309.1원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab21">
+                            <tr>
+                                <td>회원</td>
+                                <td >
+                                    <br>
+                                    23시~09시 : 183.9원<br>
+                                    09시~10시 : 203.9원<br>
+                                    10시~12시 : 218.4원<br>
+                                    12시~17시 : 203.8원<br>
+                                    17시~20시 : 218.4원<br>
+                                    20시~22시 : 203.8원<br>
+                                    22시~23시 : 218.4원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비회원</td>
+                                <td>292.9원</td>
+                            </tr>
+                            <tr>
+                                <td>기타사항</td>
+                                <td>ㆍ전압에 따라 일부 상이</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab22">
+                            <tr>
+                                <td>균일가</td>
+                                <td >292.9원</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab23">
+                            <tr>
+                                <td rowspan="2">완속</td>
+                                <td>회원</td>
+                                <td >253원</td>
+                            </tr>
+                            <tr>
+                                <td>비회원</td>
+                                <td>292.2원</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">급속 회원</td>
+                                <td>292.2</td>
+                            </tr>
+                        </table>
+                        <table border="1" id="tab24">
+                            <tr>
+                                <td>완속 회원</td>
+                                <td >
+                                    <br>
+                                    23시~09시 : 234.6원<br>
+                                    09시~10시 : 265.7원<br>
+                                    10시~12시 : 303.5원<br>
+                                    12시~17시 : 265.7원<br>
+                                    17시~20시 : 303.5원<br>
+                                    20시~22시 : 265.7원<br>
+                                    22시~23시 : 303.5원<br>
+                                    <br>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Fee End ***** -->
+
+    <!-- ***** Type Start ***** -->
+    <section class="section" id="TYPE">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Charger <em>type</em></h2>
+                        <img src="{% static 'images/line-dec.png' %}" alt="">
+                        <p>충전기의 종류를 볼 수 있는 페이지</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="tabs">
+              <div class="col-lg-4 col-md-5">
+                <ul>
+                  <li><a href='#tabs-1'><img src="{% static 'images/charge-Icon.png' %}" alt="">AC단상 5핀</a></li>
+                  <li><a href='#tabs-2'><img src="{% static 'images/charge-Icon.png' %}" alt="">AC3상 7핀</a></a></li>
+                  <li><a href='#tabs-3'><img src="{% static 'images/charge-Icon.png' %}" alt="">DC차데모 10핀</a></a></li>
+                  <li><a href='#tabs-4'><img src="{% static 'images/charge-Icon.png' %}" alt="">DC콤보 7핀</a></a></li>
+                </ul>
+              </div>
+              <div class="col-lg-8 col-md-7 col-xs-1">
+                <section class='tabs-content'>
+                  <article id='tabs-1'>
+                    <img src="{% static 'images/AC단상 5핀.png' %}" width="520px" height="300px" alt="AC단상 5핀">
+                    <h4>AC단상 5핀</h4>
+                    <p>사용차종 : 블루온, 레이, 쏘울, 아이오닉, 스파크, i3, Leaf, 볼트, ZOE</p>
+                  </article>
+                  <article id='tabs-2'>
+                    <img src="{% static 'images/AC3상 7핀.png' %}" width="520px" height="300px" alt="AC3상 7핀">
+                    <h4>AC3상 7핀</h4>
+                    <p>사용차종 : SM3</p>
+                  </article>
+                  <article id='tabs-3'>
+                    <img src="{% static 'images/DC차데모 10핀.png' %}" width="520px" height="300px" alt="DC차데모 10핀">
+                    <h4>DC차데모 10핀</h4>
+                    <p>사용차종 : 블루온, 레이, 쏘울, 아이오닉, Leaf</p>
+                  </article>
+                  <article id='tabs-4'>
+                    <img src="{% static 'images/DC콤보 7핀.png' %}" width="520px" height="300px" alt="DC콤보 7핀">
+                    <h4>DC콤보 7핀</h4>
+                    <p>사용차종 : 스파크, 볼트, 아이오닉, i3, 코나, 쏘울, ZOE</p>
+                  </article>
+                </section>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Type End ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2022 TEAM ELECLIUM
+                    
+                    - Designed by TEAM ELECLIUM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Ends ***** -->
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imgfix.min.js' %}"></script> 
+    <script src="{% static 'js/mixitup.js' %}"></script> 
+    <script src="{% static 'js/accordions.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+    
+    <!-- Global Init -->
+    <script src="{% static 'js/onclick.js' %}"></script>
+
+  </body>
+</html>

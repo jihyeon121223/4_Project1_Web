@@ -1,0 +1,41 @@
+import requests									
+from urllib import parse									
+import pandas as pd									
+from bs4 import BeautifulSoup									
+from datetime import datetime									
+from haversine import haversine   ###pip install haversine 위치기반 두 지점간 거리 나타내 줌									
+									
+									
+def getEvCharger(cur_loc_latitude: float, cur_loc_longitude: float) -> pd.DataFrame:  ##검색해서 가까운 충전소 알려줌. 그러나 명칭에 같은 문자열이 있는것도 리턴 조심.									
+									
+url = ""									
+api_key_utf8 = "your API key from data.go.kr"									
+api_key_decode = parse.unquote(api_key_utf8)									
+									
+params = {									
+	Servicekey: api_key_decode,								
+	pageNo: 1,								
+	numOfRows: 5000								
+}									
+									
+response = requests.get(url, params=params)									
+xml = BeautifulSuop(response.text, "lxml")									
+items = xml.find("items")									
+item_list = []									
+for item in items:									
+	item_dict = {								
+		addr': item.find("addr").text.strip(),							
+		chargetp': int(item.find("chargetp").text),							
+		cpid': int(item.find("cpid").text),							
+		cpnm': item.find("cpnm").text.strip(),							
+		cpstat': int(item.find("cpstat").text),							
+		cptp': int(item.find("cptp").text),							
+		csid': int(item.find("csid").text),							
+		csnm': item.find("csnm").text.strip()),							
+		lat': float(item.find("lat").text),							
+		longi': float(item.find("longi").text),							
+		statupdatedatetime: datetime.strptime(item.find("statupdatedatetime").text.strip(), '%Y-%m-%d %H:%M:%S')							
+	}								
+	item_list.append(item_dict)								
+									
+df = pd.DataFrame(item_list)   ###또는 return									
